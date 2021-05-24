@@ -21,5 +21,24 @@ namespace CamadaDados
         //constructor vazio
         public DProduto() { }
 
+        public string Inserir(DProduto dProduto)
+        {
+            string resp = "";
+            Console.WriteLine("Classe de D Produto ..........");
+            MySqlConnection SqlCon = new MySqlConnection();
+            try
+            {
+                // conn obj estanciado da classe Conexao
+                Conexao conexao = new Conexao();
+                conexao.Conectar();
+                string sqlInserir = "INSERT INTO produto (descricao, preco, estoque) VALUES('" + dProduto.Nomeproduto + "' ,'" + dProduto.Precounitario + "', '" + dProduto.QtdeEstoque + "')";
+                Console.WriteLine("SEL... " + sqlInserir);
+                conexao.ExecutarComandoSql(sqlInserir);
+            }
+            catch (Exception ex)
+            {
+                resp = "Erro ao Salvar! ... " + ex.Message;
+            }
+        }
     }
 }
