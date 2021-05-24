@@ -39,6 +39,13 @@ namespace CamadaDados
             {
                 resp = "Erro ao Salvar! ... " + ex.Message;
             }
+            finally //sempre e executado
+            {// verifica se a conexao esta aberta e fecha
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return resp;
         }
+        
     }
 }
