@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaComercial
 {
-    public partial class Form1 : Form
+    public partial class FrmSistema : Form
     {
-        public Form1()
+        public FrmSistema()
         {
             InitializeComponent();
         }
