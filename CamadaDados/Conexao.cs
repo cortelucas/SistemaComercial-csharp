@@ -21,7 +21,7 @@ namespace CamadaDados
         {//faz conexão com o banco de dados
             if (conn != null)
                 conn.Close();
-            string caminho = "server = localhost; database = dbsiscomercio; uid = root; pwd =; ";
+            string caminho = "server = localhost; database = dbsiscomercio; uid = fatec; pwd =; ";
             try //tentativa
             {
                 conn = new MySqlConnection(caminho);
