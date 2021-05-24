@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using CamadaNegocio;
 
 namespace CamadaApresentacao
 {
@@ -15,6 +17,11 @@ namespace CamadaApresentacao
         public FrmProduto()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NProduto.Inserir(textBox5.Text, Convert.ToDouble(textBox2.Text), Convert.ToInt32(textBox4.Text));
         }
     }
 }
