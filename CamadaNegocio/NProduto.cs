@@ -26,5 +26,19 @@ namespace CamadaNegocio
             Obj.Idproduto = idproduto;
             return Obj.Excluir(Obj);
         }
+        public static string Editar(int idProduto, string nome, double preco, int qtdeEstoque)
+        {
+            DProduto Obj = new DProduto();
+            Obj.Idproduto = idProduto;
+            Obj.Nomeproduto = nome;
+            Obj.Precounitario = preco;
+            Obj.QtdeEstoque = qtdeEstoque;
+            return Obj.Editar(Obj);
+        }
+        public static DataTable Mostrar()
+        {
+            return new DProduto().Mostrar();
+        }
+
     }
 }

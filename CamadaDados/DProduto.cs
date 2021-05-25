@@ -62,7 +62,7 @@ namespace CamadaDados
             DataSet dataSet;
             try
             {
-                MySqlConnection conn = conn = new MySqlConnection("server = localhost; database = dbsiscomercio; uid = root; pwd =; ");
+                MySqlConnection conn = conn = new MySqlConnection("server = localhost; database = dbsiscomercio; uid = fatec; pwd =; ");
                 //string sqlConsultar = "select * produto where nomeproduto like " + dProduto.Nomeproduto;// + "%'";
                 string sqlConsultar = "select * from produto";
                 Console.WriteLine("SQL..... " + sqlConsultar);
