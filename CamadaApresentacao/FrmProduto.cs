@@ -23,5 +23,22 @@ namespace CamadaApresentacao
         {
             NProduto.Inserir(textBox5.Text, Convert.ToDouble(textBox2.Text), Convert.ToInt32(textBox4.Text));
         }
+
+        private void buttonConsultar_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = NProduto.Mostrar();
+            label5.Visible = true;
+            label5.Text = "Total de Registros: " + Convert.ToString(dataGridView1.Rows.Count);
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            NProduto.Editar(Convert.ToInt32(textBox1.Text), textBox5.Text, Convert.ToDouble(textBox2.Text), Convert.ToInt32(textBox4.Text));
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            NProduto.Excluir(Convert.ToInt32(textBox1.Text));
+        }
     }
 }

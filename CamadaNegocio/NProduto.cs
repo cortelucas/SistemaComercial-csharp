@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //Repassa dados para a camada de dados
+using System.Data;
 using CamadaDados;
 
 namespace CamadaNegocio
@@ -18,6 +19,12 @@ namespace CamadaNegocio
             Obj.Precounitario = preco;
             Obj.QtdeEstoque = qtdEstoque;
             return Obj.Inserir(Obj);
+        }
+        public static string Excluir(int idproduto)
+        {
+            DProduto Obj = new DProduto();
+            Obj.Idproduto = idproduto;
+            return Obj.Excluir(Obj);
         }
     }
 }
